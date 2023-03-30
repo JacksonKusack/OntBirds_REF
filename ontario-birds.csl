@@ -160,7 +160,13 @@
                   <text term="available at" text-case="capitalize-first"/>
                   <text variable="URL"/>
                   <text term="accessed" prefix="["/>
-                  <date variable="accessed" form="text" date-parts="year-month-day" suffix="]" deliminator=""/>
+                  <date variable="accessed"/>
+                    <date variable="accessed">
+                      <text term="accessed" text-case="capitalize-first" suffix=" "/>
+                      <date-part name="day" suffix=" "/>
+                      <date-part name="month" suffix=" "/>
+                      <date-part name="year"/>
+                    </date>
                 </group>
               </if>
             </choose>
